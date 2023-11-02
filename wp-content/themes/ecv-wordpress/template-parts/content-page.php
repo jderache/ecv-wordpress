@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php ecv_wordpress_post_thumbnail(); ?>
+	<?= get_the_post_thumbnail_url(); ?>
 
 	<div class="entry-content">
 		<?php
