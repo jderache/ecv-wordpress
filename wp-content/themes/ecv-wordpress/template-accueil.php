@@ -14,6 +14,23 @@ get_header();
 </section>
 
 <section class="description">
-    <h2>Description : </h2>
+    <h2><?= get_field("description-title") ?></h2>
     <p><?= get_field("description") ?></p>
 </section>
+
+<section class="history">
+    <div class="history-img">
+        <img src="https://www.perneslesfontaines.fr/uploads/thumbnails/uploads/agenda/old-book-1_800x600.png" alt="">
+    </div>
+    <div class="history-content">
+        <h2>Histoire</h2>
+        <p><?= get_field("histoire") ?></p>
+        <a>En savoir plus</a>
+    </div>
+</section>
+
+<?php
+
+get_footer();
+
+?>
