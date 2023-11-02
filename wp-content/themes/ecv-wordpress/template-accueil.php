@@ -25,7 +25,7 @@ get_header();
     <div class="history-content">
         <h2>Histoire</h2>
         <p><?= get_field("histoire") ?></p>
-        <a>En savoir plus</a>
+        <a href="./histoire/">En savoir plus</a>
     </div>
 </section>
 

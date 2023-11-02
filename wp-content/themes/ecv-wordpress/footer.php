@@ -13,20 +13,22 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ecv-wordpress' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ecv-wordpress' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ecv-wordpress' ), 'ecv-wordpress', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			
+
+<!-- Site internet de l'auteur -->
+<a href="<?= get_field("site_internet_de_lauteur", 'option') ?>">
+		<!-- Nom de l'auteur -->
+		<?= get_field("auteur_du_site", 'option') ?>
+</a>
+
+
+		<span class="sep"> | </span>
+		<?php
+			echo sprintf( esc_html__( 'Theme: %1$s par %2$s', 'ecv-wordpress' ), 'ecv-wordpress', '<a href="https://julienderache.fr/" target="_blank">Julien D.</a> & <a href="https://thibautdusautoir.fr/" target="_blank">Thibaut D.</a>');
+		?>
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 
