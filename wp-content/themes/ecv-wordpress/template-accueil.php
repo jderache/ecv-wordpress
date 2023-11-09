@@ -29,6 +29,16 @@ get_header();
     </div>
 </section>
 
+<section class="design">
+    <h2>Nos Designs</h2>
+    <div class="design-gallery">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <a href="/design">Voir notre galerie</a>
+</section>
+
 <?php
 
 get_footer();
