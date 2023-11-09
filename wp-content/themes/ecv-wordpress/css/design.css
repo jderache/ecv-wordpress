@@ -1,0 +1,12 @@
+.acf-gallery {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.acf-gallery li {
+	flex: 33.333%;
+	padding: 10px;
+}
