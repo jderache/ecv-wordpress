@@ -182,3 +182,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** Applying categories to attachments **/
+
+function wptp_add_categories_to_attachments() {
+	register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_categories_to_attachments' );
