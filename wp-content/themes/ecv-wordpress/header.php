@@ -32,12 +32,6 @@
 				the_custom_logo();
 				?>
 				<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
-				<?php
-				$ecv_wordpress_description = get_bloginfo( 'description', 'display' );
-				if ( $ecv_wordpress_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $ecv_wordpress_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif; ?>
 			</div><!-- .site-branding -->
 	
 			<nav id="site-navigation" class="main-navigation">

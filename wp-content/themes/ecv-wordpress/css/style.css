@@ -9,12 +9,15 @@ body {
 }
 
 section {
-	margin-top: 200px;
+	max-width: 1440px;
+	margin: 0 auto;
+	margin-top: 140px;
 	padding: 0 40px;
 }
 
 h2 {
 	font-family: "Nunito", sans-serif;
+	color: var(--main-color);
 	font-weight: 800;
 	display: block;
 	width: fit-content;
@@ -24,9 +27,12 @@ h2 {
 	background-size: 40% 100%;
 }
 
+p {
+	line-height: 1.4;
+	font-size: 1.4rem;
+}
+
 .page {
-	max-width: 1440px;
-	margin: 0 auto;
 	margin-top: 20px;
 }
 
@@ -113,10 +119,9 @@ h2 {
 	font-size: 6rem;
 	font-weight: 600;
 }
+
 .hero-banner .content p {
 	text-transform: uppercase;
-	font-size: 1.4rem;
-	font-weight: 600;
 	color: white;
 }
 
@@ -128,8 +133,6 @@ h2 {
 
 .description p {
 	margin-top: 20px;
-	font-size: 1.4rem;
-	line-height: 1.4;
 	font-weight: 500;
 }
 
@@ -140,14 +143,12 @@ h2 {
 	gap: 40px;
 }
 
-.history > div {
+.history>div {
 	width: 50%;
 }
 
 .history-content p {
 	margin: 40px 0;
-	line-height: 1.4;
-	font-size: 1.4rem;
 }
 
 .history-img img {
@@ -177,6 +178,33 @@ h2 {
 	text-align: center;
 	color: white;
 }
+
 .site-footer a {
 	color: inherit;
+}
+
+@media screen and (max-width: 1440px) {
+	.site-header .content {
+		padding: 0 60px;
+	}
+
+	.hero-banner {
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+	h2 {
+		font-size: 1.6rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+		line-height: 1.2;
+	}
+
+	section {
+		margin-top: 100px;
+		padding: 0 60px;
+	}
 }
