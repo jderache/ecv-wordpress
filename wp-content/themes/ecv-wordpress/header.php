@@ -45,5 +45,19 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
+
+			<nav class="main-navigation-mobile">
+				<input type="checkbox" role="button" aria-label="Display the menu" class="burger-menu">
+				<div class="mobile-menu">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
+				</div>
+			</nav>
 		</div>
 	</header><!-- #masthead -->

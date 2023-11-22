@@ -32,11 +32,24 @@ get_header();
 <section class="design">
     <h2>Nos Designs</h2>
     <div class="design-gallery">
-        <div></div>
-        <div></div>
-        <div></div>
+        <?php 
+        $images = get_field('apercu-design');
+        for($i = 0; $i < 3; $i++): ?>
+            <div class="design-gallery-item">
+                <div id="image-<?= $i ?>" style="background-image: url(<?= $images[$i] ?>)"></div>
+                <?php if($i === 2): ?>
+                    <a class="button-primary" href="./design">Voir notre galerie</a>
+                <?php endif; ?>
+            </div>
+        <?php endfor; ?>
     </div>
-    <a href="/design">Voir notre galerie</a>
+</section>
+
+<section class="contact">
+    <div class="contact-link"> 
+        <a class="button-primary" href="./contact">Nous contacter</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/207/207161.png" alt="">
+    </div>
 </section>
 
 <?php

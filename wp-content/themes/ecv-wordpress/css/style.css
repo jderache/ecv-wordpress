@@ -73,37 +73,6 @@ header.fixed .site-branding .custom-logo-link {
 	width: 100px;
 }
 
-/* Navigation
---------------------------------------------- */
-.main-navigation {
-	display: flex;
-}
-
-.main-navigation ul {
-	display: flex;
-	gap: 40px;
-	list-style: none;
-}
-
-.main-navigation a {
-	font-family: "Nunito", sans-serif;
-	text-decoration: none;
-	font-size: 1.4rem;
-	background: linear-gradient(to top, var(--main-color) 10%, var(--main-color) 4px, transparent 5px) no-repeat;
-	padding-bottom: 2px;
-	background-size: 0 100%;
-	transition: background-size 0.3s;
-	font-weight: 800;
-}
-
-.main-navigation a:visited {
-	color: black;
-}
-
-.main-navigation a:hover {
-	background-size: 100% 100%;
-}
-
 /** HERO-BANNER **/
 
 .hero-banner {
@@ -113,6 +82,8 @@ header.fixed .site-branding .custom-logo-link {
 	border-radius: 20px;
 	margin-top: 60px;
 	padding: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .hero-banner .content {
@@ -157,7 +128,7 @@ header.fixed .site-branding .custom-logo-link {
 	gap: 40px;
 }
 
-.history > div {
+.history>div {
 	width: 50%;
 }
 
@@ -168,6 +139,7 @@ header.fixed .site-branding .custom-logo-link {
 .history-img img {
 	width: 80%;
 }
+
 a:visited {
 	color: inherit;
 }
@@ -224,14 +196,60 @@ a:visited {
 	gap: 40px;
 }
 
-.design-gallery div {
+.design-gallery-item {
 	width: 300px;
-	height: 400px;
-	background-color: red;
+	height: 300px;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: #f2f2f2;
+	position: relative;
+	border: none;
+	-webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+}
+
+.design-gallery-item div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transition: transform .2s ease-out;
+	border-radius: 20px;
+	border: none;
+}
+
+.design-gallery-item .button-primary {
+	max-width: 300px;
+	position: absolute;
+	right: -60px;
+	bottom: -40px;
+}
+
+.contact-link .button-primary {
+	transition: 800ms;
+}
+
+.contact-link {
+	position: relative;
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.contact-link img {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: -60px;
+	top: -60px;
 }
 
 /** FOOTER **/
@@ -274,6 +292,8 @@ a:visited {
 		padding: 0 60px;
 	}
 }
+
+@media screen and (max-width: 769px) {}
 
 @media (min-width: 768px) {
 	.button-primary {

@@ -1,0 +1,152 @@
+.main-navigation {
+    display: flex;
+}
+
+.main-navigation-mobile {
+    display: none;
+}
+
+.main-navigation ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.main-navigation a,
+.main-navigation-mobile a {
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
+    font-size: 1.4rem;
+    background: linear-gradient(to top, var(--main-color) 10%, var(--main-color) 4px, transparent 5px) no-repeat;
+    padding-bottom: 2px;
+    background-size: 0 100%;
+    transition: background-size 0.3s;
+    font-weight: 800;
+}
+
+.main-navigation a:visited {
+    color: black;
+}
+
+.main-navigation a:hover {
+    background-size: 100% 100%;
+}
+
+/* BURGER MENU */
+
+.burger-menu {
+    --size: 40px;
+    --color: black;
+
+    margin-right: -20px;
+    height: var(--size);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--size)/2) solid #0000;
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--color) 20%, #0000 0 80%, var(--color) 0) no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--color) 95%, #0000) repeat-y content-box border-box;
+    background:
+        var(--_g2) left var(--_p, 0px) top,
+        var(--_g1) left calc(var(--size)/10 + var(--_p, 0px)) top,
+        var(--_g2) right var(--_p, 0px) top,
+        var(--_g1) right calc(var(--size)/10 + var(--_p, 0px)) top;
+    background-size:
+        20% 80%,
+        40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
+    cursor: pointer;
+    transition:
+        background-position .3s var(--_s, .3s),
+        clip-path 0s var(--_s, .6s);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.burger-menu:before,
+.burger-menu:after {
+    content: "";
+    position: absolute;
+    border-radius: var(--size);
+    inset: 40% 0;
+    background: var(--color);
+    transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.burger-menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--size));
+    --_s: 0s;
+}
+
+.burger-menu:checked:before {
+    transform: rotate(45deg);
+}
+
+.burger-menu:checked:after {
+    transform: rotate(-45deg);
+}
+
+.burger-menu:focus-visible {
+    clip-path: none;
+    -webkit-mask: none;
+    border: none;
+    outline: 2px solid var(--color);
+    outline-offset: 5px;
+}
+
+header.fixed .mobile-menu {
+    top: 72.5px;
+}
+
+.mobile-menu {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    top: 102.5px;
+    background-color: white;
+    transition: 400ms;
+    width: 100%;
+    left: 0;
+    display: none;
+    transform: translateX(-10%);
+    padding: 20px 40px;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-menu.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+@media screen and (max-width: 769px) {
+    .main-navigation {
+        display: none;
+    }
+
+    .main-navigation-mobile {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .site-header .content {
+        padding: 0 40px;
+    }
+}
