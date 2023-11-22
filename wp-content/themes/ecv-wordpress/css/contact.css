@@ -66,7 +66,6 @@ form.error .error-msg {
 	position: absolute;
 	bottom: -48px;
 	right: 4px;
-
 }
 
 .form label.error::before {
@@ -99,4 +98,40 @@ form.success button.button-primary::after {
 
 button.button-primary {
 	margin-top: 20px;
+}
+
+.form {
+	display: flex;
+}
+
+.form .contact-info {
+	min-width: 40%;
+	padding: 20px;
+	margin-left: 20px;
+}
+
+.form .contact-info a,
+.form .contact-info a:hover,
+.form .contact-info a:visited {
+	color: inherit;
+}
+
+form#send-contact-form {
+	min-width: 60%;
+}
+
+@media screen and (max-width: 769px) {
+	.form {
+		flex-direction: column-reverse;
+	}
+	.form .contact-info {
+		min-width: 100%;
+		margin-left: 0;
+		padding: 0;
+	}
+
+	form#send-contact-form {
+		min-width: 100%;
+		margin-top: 50px;
+	}
 }
