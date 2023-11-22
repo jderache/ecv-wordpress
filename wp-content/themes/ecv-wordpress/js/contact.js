@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.getElementById("send-contact-form");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
