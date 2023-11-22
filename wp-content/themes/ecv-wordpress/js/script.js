@@ -33,6 +33,10 @@ let observer = new IntersectionObserver(
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.remove("hide");
+            } else {
+                if (entry.target.classList.contains("galerie")) {
+                    entry.target.classList.remove("hide");
+                }
             }
         });
     },
