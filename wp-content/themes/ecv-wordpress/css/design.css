@@ -1,0 +1,74 @@
+section {
+	margin-top: 0;
+}
+
+.acf-gallery {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.acf-gallery li {
+	flex: 33.333%;
+	padding: 10px;
+}
+/* Style de base pour les boutons */
+div button {
+	background-color: #4a4a4a; /* Fond foncé pour un look moderne */
+	color: #f0f0f0; /* Texte clair pour un contraste élevé */
+	border: 2px solid transparent; /* Bordure transparente pour un effet de survol */
+	padding: 12px 24px;
+	margin: 8px;
+	border-radius: 6px; /* Bords légèrement arrondis */
+	font-size: 1em;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative; /* Position relative pour les pseudo-éléments */
+	overflow: hidden; /* Cache les débordements des pseudo-éléments */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Effet de survol avec bordure colorée et arrière-plan plus clair */
+div button:hover {
+	background-color: #5a5a5a;
+	border-color: #a3bad9; /* Teinte de bleu subtile */
+}
+
+/* Effet géométrique avec pseudo-éléments */
+div button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.1) 10px, rgba(255, 255, 255, 0.1) 20px); /* Bandes diagonales pour un effet géométrique */
+	transition: left 0.4s;
+	z-index: 0;
+}
+
+/* Animation des bandes géométriques au survol */
+div button:hover::before {
+	left: 100%;
+}
+
+/* Texte du bouton par-dessus l'effet géométrique */
+div button span {
+	position: relative;
+	z-index: 1;
+}
+
+/* Exemples de styles personnalisés pour chaque catégorie de bouton */
+button[value="tatoo-all"] {
+	/* Styles spécifiques pour 'Tous' */
+}
+
+button[value="tatoo-colors"] {
+	/* Styles spécifiques pour 'Couleurs' */
+}
+
+button[value="tatoo-black-white"] {
+	/* Styles spécifiques pour 'Black & White' */
+}
