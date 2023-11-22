@@ -1,6 +1,58 @@
+h1 {
+	font-family: "Nunito", sans-serif;
+	color: var(--main-color);
+	font-weight: 800;
+	width: fit-content;
+	font-size: 6rem;
+	padding-bottom: 4px;
+	background-size: 40% 100%;
+	margin: 0 auto;
+	background: none;
+}
+
+section {
+	margin-top: 50px;
+}
+.content {
+	h2 {
+		margin: 0 auto;
+	}
+}
 #founder-1 img,
 #founder-2 img {
 	width: 250px;
 	border-radius: 250px;
 	object-fit: cover;
+}
+div.founders {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-evenly;
+	margin-top: 40px;
+	h2 {
+		margin: 0 auto;
+	}
+}
+#founder-1,
+#founder-2 {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h3 {
+	color: var(--main-color);
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 15px 0px;
+	font-family: "Nunito", sans-serif;
+}
+
+h2 {
+	margin: 15px 0px;
+	margin: 0 auto;
+}
+
+p.desc-fondateur {
+	text-align: center;
 }

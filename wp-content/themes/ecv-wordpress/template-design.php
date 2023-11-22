@@ -5,8 +5,8 @@
   get_header();
 ?>
 <section class="galerie">
-  <h1><?php the_title(); ?></h1>
-  <div>
+  <h1>Nos designs</h1>
+  <div class="btns">
     <button type="button" value="tatoo-all">Tous</button>
     <button type="button" value="tatoo-colors">Couleurs</button>
     <button type="button" value="tatoo-black-white">Black & White</button>
