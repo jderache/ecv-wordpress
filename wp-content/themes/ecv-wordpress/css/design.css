@@ -71,3 +71,28 @@ div button span {
 	position: relative;
 	z-index: 1;
 }
+
+@media screen and (max-width: 769px) {
+	h1 {
+		font-size: 4.5rem;
+	}
+	.acf-gallery li {
+		flex: 49%;
+	}
+}
+
+@media screen and (max-width: 476px) {
+	h1 {
+		font-size: 3.4rem;
+	}
+	div.btns {
+		flex-direction: column;
+	}
+	div button {
+		padding: 10px;
+		margin: 10px 0;
+	}
+	.acf-gallery li {
+		flex: 100%;
+	}
+}

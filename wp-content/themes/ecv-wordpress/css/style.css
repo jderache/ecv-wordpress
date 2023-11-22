@@ -44,7 +44,7 @@ p {
 	top: 0;
 	width: 100%;
 	background-color: white;
-	z-index: 1;
+	z-index: 9999;
 	transition: 400ms;
 }
 
@@ -133,7 +133,7 @@ img.custom-logo {
 	gap: 40px;
 }
 
-.history>div {
+.history > div {
 	width: 50%;
 }
 
@@ -227,7 +227,7 @@ a:visited {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	transition: transform .2s ease-out;
+	transition: transform 0.2s ease-out;
 	border-radius: 20px;
 	border: none;
 }
@@ -328,7 +328,7 @@ a:visited {
 		right: 0;
 	}
 
-	.history>div {
+	.history > div {
 		width: 100%;
 	}
 
@@ -367,7 +367,8 @@ a:visited {
 		padding: 0px 40px;
 	}
 
-	h2 {}
+	h2 {
+	}
 
 	.site-footer {
 		font-size: 0.8rem;
