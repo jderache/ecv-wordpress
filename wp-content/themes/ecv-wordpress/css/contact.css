@@ -1,0 +1,41 @@
+p {
+	margin-top: 20px;
+}
+.form {
+	margin-top: 40px;
+}
+/* Styles pour les labels, clairs et lisibles */
+.form label {
+	display: block;
+	margin-bottom: 10px;
+	color: #041e40; /* Couleur foncée pour un contraste élevé */
+	font-size: 0.9em;
+}
+
+/* Styles pour les champs de saisie et la zone de texte, épurés */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #e5e7eb; /* Bordure légère */
+	border-radius: 4px;
+	background-color: #fff; /* Fond blanc pour les champs */
+	font-size: 1em;
+	color: #041e40;
+}
+
+/* Interaction subtile avec l'utilisateur */
+.form input[type="text"]:hover,
+.form input[type="email"]:hover,
+.form textarea:hover,
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+	border-color: #a3bad9ed; /* Couleur de bordure au survol ou au focus */
+}
+
+button.button-primary {
+	margin-top: 20px;
+}

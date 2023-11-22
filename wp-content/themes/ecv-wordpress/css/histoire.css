@@ -1,0 +1,6 @@
+#founder-1 img,
+#founder-2 img {
+	width: 250px;
+	border-radius: 250px;
+	object-fit: cover;
+}

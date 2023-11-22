@@ -20,7 +20,7 @@ get_header();
 
 <section class="history">
     <div class="history-img">
-        <img src="https://www.perneslesfontaines.fr/uploads/thumbnails/uploads/agenda/old-book-1_800x600.png" alt="">
+        <img src="<?= get_field('histoire_img'); ?>" alt="">
     </div>
     <div class="history-content">
         <h2>Histoire</h2>

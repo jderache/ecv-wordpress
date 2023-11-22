@@ -22,6 +22,7 @@ section.hide {
 	transform: translateX(-20px);
 }
 
+h1,
 h2 {
 	font-family: "Nunito", sans-serif;
 	color: var(--main-color);
@@ -56,7 +57,7 @@ header.fixed {
 }
 
 header.fixed .site-branding .custom-logo-link {
-	width: 70px;
+	width: 42px;
 }
 
 .site-header .content {
@@ -70,7 +71,11 @@ header.fixed .site-branding .custom-logo-link {
 
 .site-branding .custom-logo-link {
 	transition: 400ms;
-	width: 100px;
+	width: 56px;
+}
+
+img.custom-logo {
+	object-fit: contain;
 }
 
 /** HERO-BANNER **/
@@ -78,7 +83,7 @@ header.fixed .site-branding .custom-logo-link {
 .hero-banner {
 	display: block;
 	height: 600px;
-	width: 100%;
+	width: 94%;
 	border-radius: 20px;
 	margin-top: 60px;
 	padding: 0;
@@ -103,6 +108,8 @@ header.fixed .site-branding .custom-logo-link {
 	text-transform: uppercase;
 	font-size: 6rem;
 	font-weight: 600;
+	color: inherit;
+	background: inherit;
 }
 
 .hero-banner .content p {
@@ -133,11 +140,14 @@ header.fixed .site-branding .custom-logo-link {
 }
 
 .history-content p {
-	margin: 40px 0;
+	margin: 20px 0;
 }
 
 .history-img img {
-	width: 80%;
+	width: 100%;
+	object-fit: cover;
+	height: 450px;
+	border-radius: 20px;
 }
 
 a:visited {
@@ -268,7 +278,7 @@ a:visited {
 
 @media screen and (max-width: 1440px) {
 	.site-header .content {
-		padding: 0 60px;
+		padding: 10px 60px;
 	}
 
 	.hero-banner {

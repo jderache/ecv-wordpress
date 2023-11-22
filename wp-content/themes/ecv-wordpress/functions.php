@@ -148,6 +148,12 @@ function ecv_wordpress_scripts() {
 	if ( is_page_template( 'template-design.php' ) ) {
 		wp_enqueue_style( 'ecv-wordpress-design-style', get_template_directory_uri() . '/css/design.css' );
 	}
+	if ( is_page_template( 'template-contact.php' ) ) {
+		wp_enqueue_style( 'ecv-wordpress-design-style', get_template_directory_uri() . '/css/contact.css' );
+	}
+	if ( is_page_template( 'template-histoire.php' ) ) {
+		wp_enqueue_style( 'ecv-wordpress-design-style', get_template_directory_uri() . '/css/histoire.css' );
+	}
 	wp_enqueue_script( 'ecv-wordpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -183,3 +189,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** Applying categories to attachments **/
+
+function wptp_add_categories_to_attachments() {
+	register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_categories_to_attachments' );

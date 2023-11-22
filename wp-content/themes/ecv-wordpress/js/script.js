@@ -12,7 +12,7 @@ burgerIcon.addEventListener('click', () => {
 /** ELSE */
 
 const windowWith = window.innerWidth;
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll("section");
 
 const header = document.querySelector('.site-header');
 const hero_banner = document.querySelector('.hero-banner');
@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
 });
 
 sections.forEach((section) => {
-    section.classList.add('hide');
+    section.classList.add("hide");
 });
 
 let observer = new IntersectionObserver(
@@ -34,13 +34,14 @@ let observer = new IntersectionObserver(
         entries.forEach((entry) => {
             console.log(entry);
             if (entry.isIntersecting) {
-                entry.target.classList.remove('hide');
+                console.log(entry.target);
+                entry.target.classList.remove("hide");
             }
         });
     },
     {
-        threshold: windowWith < 767 ? 0.2 : 0.6
-    }
+        threshold: windowWith < 767 ? 0.2 : 0.1,
+    },
 );
 
 sections.forEach((observed) => {
