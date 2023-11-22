@@ -35,7 +35,7 @@
 /* BURGER MENU */
 
 .burger-menu {
-    --size: 40px;
+    --size: 30px;
     --color: black;
 
     margin-right: -20px;
@@ -116,6 +116,7 @@ header.fixed .mobile-menu {
     display: none;
     transform: translateX(-10%);
     padding: 20px 40px;
+    border-bottom: 1px solid black;
 }
 
 .mobile-menu ul {
@@ -147,6 +148,6 @@ header.fixed .mobile-menu {
 
 @media screen and (max-width: 476px) {
     .site-header .content {
-        padding: 0 40px;
+        padding: 20px 40px;
     }
 }

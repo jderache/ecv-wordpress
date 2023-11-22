@@ -30,9 +30,6 @@ h2 {
 	display: block;
 	width: fit-content;
 	font-size: 1.8rem;
-	background: linear-gradient(to top, var(--main-color) 10%, var(--main-color) 4px, transparent 5px) no-repeat;
-	padding-bottom: 4px;
-	background-size: 40% 100%;
 }
 
 p {
@@ -64,7 +61,7 @@ header.fixed .site-branding .custom-logo-link {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 40px;
+	padding: 10px 40px;
 	max-width: 1440px;
 	margin: 0 auto;
 }
@@ -115,6 +112,7 @@ img.custom-logo {
 .hero-banner .content p {
 	text-transform: uppercase;
 	color: white;
+	text-align: center;
 }
 
 /** ACCUEIL **/
@@ -301,13 +299,77 @@ a:visited {
 		margin-top: 100px;
 		padding: 0 60px;
 	}
+
+	.design-gallery-item .button-primary {
+		right: -20px;
+	}
 }
 
-@media screen and (max-width: 769px) {}
+@media screen and (max-width: 769px) {
+	.hero-banner .content h1 {
+		font-size: 4.5rem;
+	}
+
+	.hero-banner .content p {
+		font-size: 1rem;
+	}
+
+	.history {
+		flex-direction: column-reverse;
+		position: relative;
+		gap: 20px;
+	}
+
+	.history .button-primary {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+
+	.history>div {
+		width: 100%;
+	}
+
+	.design-gallery {
+		flex-direction: column;
+	}
+
+	.design-gallery-item {
+		width: 100%;
+	}
+
+	.design-gallery-item .button-primary {
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
 
 @media (min-width: 768px) {
 	.button-primary {
 		padding: 0.75rem 3rem;
 		font-size: 1.25rem;
+	}
+}
+
+@media screen and (max-width: 476px) {
+	.hero-banner .content h1 {
+		font-size: 3.4rem;
+	}
+
+	.hero-banner .content p {
+		font-size: 0.8rem;
+	}
+
+	section {
+		padding: 0px 40px;
+	}
+
+	h2 {}
+
+	.site-footer {
+		font-size: 0.8rem;
 	}
 }
