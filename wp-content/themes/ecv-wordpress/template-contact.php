@@ -19,6 +19,10 @@ get_header(); ?>
         <button type="submit" class="button-primary">Envoyer</button>
         <p class='error-msg'>Une erreur est survenue, veuillez réessayer plus tard</p>
     </form>
+    <div class="contact-info">
+        <h2>Informations de contact</h2>
+        <p><?= get_field('informations_de_contact') ?></p>
+    </div>
 </section>
 
 <?php get_footer(); ?>

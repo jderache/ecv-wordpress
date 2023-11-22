@@ -53,22 +53,6 @@ h2 {
 
 /* Slider - Carrousel */
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: #1b1b1b;
-		color: #e2e2e2;
-	}
-	.handles svg path {
-		stroke: #e2e2e2 !important;
-	}
-	.dots span {
-		background: #fff !important;
-		opacity: 0.5;
-	}
-	.dots span.active {
-		opacity: 1;
-	}
-}
 .PostSlide {
 	max-width: 1300px;
 	margin: 40px auto;
