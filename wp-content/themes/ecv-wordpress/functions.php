@@ -150,6 +150,8 @@ function ecv_wordpress_scripts() {
 	}
 	if ( is_page_template( 'template-contact.php' ) ) {
 		wp_enqueue_style( 'ecv-wordpress-design-style', get_template_directory_uri() . '/css/contact.css' );
+		wp_enqueue_script( 'ecv-wordpress-contact-script', get_template_directory_uri() . '/js/contact.js', array(), _S_VERSION, true );
+		wp_localize_script( 'ecv-wordpress-contact-script', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 	}
 	if ( is_page_template( 'template-histoire.php' ) ) {
 		wp_enqueue_style( 'ecv-wordpress-design-style', get_template_directory_uri() . '/css/histoire.css' );
@@ -161,6 +163,40 @@ function ecv_wordpress_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ecv_wordpress_scripts' );
+
+// add action for contact form ajax
+add_action( 'wp_ajax_send_contact_form', 'send_contact_form' );
+add_action( 'wp_ajax_nopriv_send_contact_form', 'send_contact_form' );
+
+function send_contact_form() {
+	$email = htmlentities($_POST['email']);
+	$nom = htmlentities($_POST['nom']);
+	$message = htmlentities($_POST['message']);
+
+	$to = "tdnet59@gmail.com";
+	$subject = "Site web - Formulaire de contact";
+
+	$content = '<table>';
+	$content .= '<tr><td><b>Nom : </b>'.$nom.'</td></tr>';
+	$content .= '<tr><td><b>Email : </b>'.$email.'</td></tr>';
+	$content .= '<tr><td><b>Message : </b>'.$message.'</td></tr>';
+	$content .= '</table>';
+
+	$headers = 'From: '.$nom.' <'.$email.'>' . "\r\n";
+	$headers .= 'X-Mailer: PHP/' . phpversion(). "\n";
+	$headers .= "Content-Transfer-Encoding: 8bit\n";
+	$headers .= "Content-Type: text/html; charset= utf-8\n";
+
+	
+	$send = wp_mail($to, $subject, $content, $headers);
+
+	if($send) {
+		$data['send'] = true;
+		wp_send_json_success($data);
+	} 
+
+	wp_die();
+}
 
 /**
  * Implement the Custom Header feature.

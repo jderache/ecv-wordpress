@@ -4,7 +4,6 @@ const burgerIcon = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 burgerIcon.addEventListener('click', () => {
-    console.log('click');
     mobileMenu.classList.toggle('active');
 });
 
@@ -32,9 +31,7 @@ sections.forEach((section) => {
 let observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
-            console.log(entry);
             if (entry.isIntersecting) {
-                console.log(entry.target);
                 entry.target.classList.remove("hide");
             }
         });

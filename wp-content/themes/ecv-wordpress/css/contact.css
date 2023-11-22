@@ -1,18 +1,33 @@
 section {
 	margin-top: 50px;
 }
+
 p {
 	margin-top: 20px;
 }
+
 .form {
 	margin-top: 40px;
 }
+
+form .error-msg {
+	display: none;
+	background: #ffa3a3;
+	padding: 6px;
+}
+
+form.error .error-msg {
+	display: block;
+}
+
 /* Styles pour les labels, clairs et lisibles */
 .form label {
 	display: block;
 	margin-bottom: 10px;
-	color: #041e40; /* Couleur foncée pour un contraste élevé */
+	color: #041e40;
+	/* Couleur foncée pour un contraste élevé */
 	font-size: 0.9em;
+	position: relative;
 }
 
 /* Styles pour les champs de saisie et la zone de texte, épurés */
@@ -22,11 +37,53 @@ p {
 	width: 100%;
 	padding: 8px;
 	margin-bottom: 15px;
-	border: 1px solid #e5e7eb; /* Bordure légère */
+	border: 1px solid #e5e7eb;
+	/* Bordure légère */
 	border-radius: 4px;
-	background-color: #fff; /* Fond blanc pour les champs */
+	background-color: #fff;
+	/* Fond blanc pour les champs */
 	font-size: 1em;
 	color: #041e40;
+}
+
+.form input[type="text"].error,
+.form input[type="email"].error,
+.form textarea.error {
+	border-color: #ff0000;
+}
+
+.form label::before {
+	content: attr(data-error);
+	display: block;
+	background: #ffa3a3;
+	border-radius: 4px;
+	width: fit-content;
+	float: right;
+	padding: 10px;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: 400ms;
+	position: absolute;
+	bottom: -48px;
+	right: 4px;
+
+}
+
+.form label.error::before {
+	opacity: 1;
+	content: attr(data-error);
+	transform: translateX(0);
+}
+
+form.success button.button-primary {
+	transition: 200ms;
+	max-width: 300px;
+	background: #1ed11e66;
+}
+
+form.success button.button-primary::after {
+	bottom: 2px;
+	left: 2px;
 }
 
 /* Interaction subtile avec l'utilisateur */
@@ -36,7 +93,8 @@ p {
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form textarea:focus {
-	border-color: #a3bad9ed; /* Couleur de bordure au survol ou au focus */
+	border-color: #a3bad9ed;
+	/* Couleur de bordure au survol ou au focus */
 }
 
 button.button-primary {
