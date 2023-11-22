@@ -5,7 +5,7 @@ get_header(); ?>
     <?php the_content(); ?>
 </section>
 <section class="form">
-    <form action="<?php echo esc_url('test.php'); ?>" method="post" novalidate>
+    <form method="post" novalidate>
         <input type="hidden" name="action" value="send_contact_form">
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" value="<?php echo esc_attr( get_field('nom') ); ?>" required>

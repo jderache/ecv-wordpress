@@ -57,7 +57,7 @@ form.addEventListener("submit", async (event) => {
 
 })
 
-const fields = document.querySelectorAll("input, textarea");
+const fields = form.querySelectorAll("input, textarea");
 
 fields.forEach((field) => {
     field.addEventListener("input", (event) => {
