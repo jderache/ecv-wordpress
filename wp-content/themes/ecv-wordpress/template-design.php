@@ -13,7 +13,7 @@
   </div>
   <?php
     $images = get_field( 'galerie' );
-    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+    $size = 'full'; 
     if( $images ): 
   ?>
       <ul class="acf-gallery">

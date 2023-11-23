@@ -78,7 +78,6 @@ get_header(); ?>
 var autoplayIntervalInSeconds = 3;
 
 class PostSlider {
-
     constructor(containerElement,autoplayIntervalInSeconds) {
         this.container = containerElement;
         if (!this.container) {
@@ -96,7 +95,6 @@ class PostSlider {
         this.slideMargin = ((this.sLiderWidth - (this.sildesPerPage * this.oneSLideWidth)) / (this.sildesPerPage * 2)).toFixed(5);
         this.changeSlidesMargins();
 
-        // Assign this.dots before calling bindDotClickHandlers
         this.dots = this.container.querySelectorAll('.dots span');
         this.bindDotClickHandlers();
 
@@ -318,7 +316,6 @@ class PostSlider {
         clearInterval(this.autoplayInterval);
     }
 }
-
 
 window.addEventListener('load',function (){
     var container = document.querySelector('.PostSlide .innerContainer');

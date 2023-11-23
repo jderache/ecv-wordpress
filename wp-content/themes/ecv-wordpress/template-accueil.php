@@ -3,7 +3,6 @@
 // Template Name: Page d'accueil
 get_header();
 
-
 ?>
 
 <section class="hero-banner" style="background-image: url(<?= get_field('hero-img'); ?>)">
@@ -53,7 +52,5 @@ get_header();
 </section>
 
 <?php
-
 get_footer();
-
 ?>
